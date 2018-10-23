@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainPageController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <AnchorPane layoutY="-2.0" prefHeight="200.0" prefWidth="598.0">
+               <children>
+                  <TextField fx:id="medicalPersonnelUserNameField" layoutX="416.0" layoutY="65.0" opacity="0.8" prefHeight="38.0" prefWidth="167.0" />
+                  <PasswordField fx:id="medicalPersonnelPasswordField" layoutX="416.0" layoutY="110.0" onAction="#goToMedicalPersonnelPage" opacity="0.8" prefHeight="38.0" prefWidth="167.0" />
+                  <Button layoutX="16.0" layoutY="103.0" mnemonicParsing="false" onAction="#goToMedicalPersonnelPage" opacity="0.6" prefHeight="45.0" prefWidth="203.0" text="Login" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="16.0" layoutY="53.0" opacity="0.89" prefHeight="45.0" prefWidth="203.0" text="Medical Administrator">
+                     <font>
+                        <Font name="Century Gothic Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="356.0" layoutY="107.0" opacity="0.8" prefHeight="38.0" prefWidth="60.0" text="password" />
+                  <Label layoutX="356.0" layoutY="76.0" opacity="0.8" prefHeight="17.0" prefWidth="60.0" text="username" />
+                  <Label fx:id="feedbackLabel" alignment="CENTER" layoutX="71.0" layoutY="6.0" opacity="0.8" prefHeight="25.0" prefWidth="453.0" textFill="#e43333d1" />
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <AnchorPane layoutY="-2.0" prefHeight="200.0" prefWidth="598.0">
+               <children>
+                  <TextField fx:id="customerServiceUserNameField" layoutX="416.0" layoutY="58.0" opacity="0.8" prefHeight="38.0" prefWidth="167.0" />
+                  <PasswordField fx:id="customerServicepasswordField" layoutX="416.0" layoutY="103.0" onAction="#goToCustomerServicePage" opacity="0.8" prefHeight="38.0" prefWidth="167.0" />
+                  <Button layoutX="16.0" layoutY="96.0" mnemonicParsing="false" onAction="#goToCustomerServicePage" opacity="0.6" prefHeight="45.0" prefWidth="217.0" text="Login" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="16.0" layoutY="46.0" opacity="0.89" prefHeight="45.0" prefWidth="217.0" text="Customer Service Personnel">
+                     <font>
+                        <Font name="Century Gothic Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="356.0" layoutY="100.0" opacity="0.8" prefHeight="38.0" prefWidth="60.0" text="password" />
+                  <Label layoutX="356.0" layoutY="69.0" opacity="0.8" prefHeight="17.0" prefWidth="60.0" text="username" />
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
