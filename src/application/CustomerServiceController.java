@@ -82,8 +82,8 @@ public class CustomerServiceController implements Serializable {
 
 		String firstName = "user";
 		String lastName = "001";
-		int openCases = 0;
-		int closedCases = 0;
+		//int openCases = 0;
+		//int closedCases = 0;
 
 		customerServiceProfile = new CustomerServiceProfile(firstName, lastName, nowString, openCases, closedCases);
 
@@ -178,8 +178,14 @@ public class CustomerServiceController implements Serializable {
 
 			for (PatientProfile patient : patientInfo) {
 				age = patient.getAge();
+				
+								
+//				if (minAge >= maxAge) {
+//					System.out.println("Please fill out the form correctly, ");
+//				}
 
-				if (maxAge >= age && age >= minAge) {
+				if ((maxAge >= age && age >= minAge)||(minAge >= age && age >= maxAge)) {
+					//the if statement above takes into consideration human error of typing max age into the min input and vice-versa
 					String firstName = patient.getFirstName();
 					String lastName = patient.getLastName();
 					String phone = patient.getPhone();// this created so that the telephone number could be used as
